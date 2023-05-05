@@ -33,6 +33,7 @@
 
 # CMake Output
 cmake-build-debug/*
+cmake-build-debug-remote/*
 image-test-data/*
 image-test-data/bmp-2_25-ltr/*
 
