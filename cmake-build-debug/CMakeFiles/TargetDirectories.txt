@@ -1,3 +1,0 @@
-/home/foxdev/projects/cxx-projects/vc-v4l2-opencv-test/cmake-build-debug/CMakeFiles/vc_v4l2_opencv_test.dir
-/home/foxdev/projects/cxx-projects/vc-v4l2-opencv-test/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/foxdev/projects/cxx-projects/vc-v4l2-opencv-test/cmake-build-debug/CMakeFiles/rebuild_cache.dir

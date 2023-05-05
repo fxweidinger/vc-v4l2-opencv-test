@@ -1,4 +1,0 @@
-/home/foxdev/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/foxdev/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/ninja/linux/x64/ninja -G Ninja -S /home/foxdev/projects/cxx-projects/vc-v4l2-opencv-test -B /home/foxdev/projects/cxx-projects/vc-v4l2-opencv-test/cmake-build-debug
--- Configuring done
--- Generating done
--- Build files have been written to: /home/foxdev/projects/cxx-projects/vc-v4l2-opencv-test/cmake-build-debug
