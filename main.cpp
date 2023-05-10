@@ -19,9 +19,6 @@ int main() {
     cap.set(CAP_PROP_CONVERT_RGB ,0);
     std::cout<<"Convert Flag Toggle? : "<<cap.get(CAP_PROP_CONVERT_RGB)<<std::endl;
 
-    std::cout<<"FPS: "<<cap.get(CAP_PROP_FPS)<<std::endl;
-    cap.set(CAP_PROP_FPS ,60.0);
-    std::cout<<"FPS Set? : "<<cap.get(CAP_PROP_FPS)<<std::endl;
 
 
 
@@ -41,7 +38,7 @@ int main() {
         //std::ctime(reinterpret_cast<const time_t *>(std::chrono::system_clock::to_time_t(
         //                std::chrono::system_clock::now())))
         std::cout<<"Frame info: "<<frame.type()<<std::endl;
-        imwrite("/home/fue/image-acq-tests/test.jpg",frame);
+        imwrite("/home/fue/image-acq-tests/test08.jpg",frame);
     //}
     // the camera will be deinitialized automatically in VideoCapture destructor
     return 0;
