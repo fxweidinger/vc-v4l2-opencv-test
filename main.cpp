@@ -14,32 +14,29 @@ int main() {
         std::cerr<<"Error! Can't open camera";
         return -1;
     }
+    /**
+     * Prevent OpenCV from creating a 3 channel matrix for greyscale image
+     */
+//    std::cout<<"Convert Flag : "<<cap.get(CAP_PROP_CONVERT_RGB)<<std::endl;
+//    cap.set(CAP_PROP_CONVERT_RGB ,0);
+//    std::cout<<"Convert Flag Toggle? : "<<cap.get(CAP_PROP_CONVERT_RGB)<<std::endl;WS
 
-    std::cout<<"Convert Flag : "<<cap.get(CAP_PROP_CONVERT_RGB)<<std::endl;
-    cap.set(CAP_PROP_CONVERT_RGB ,0);
-    std::cout<<"Convert Flag Toggle? : "<<cap.get(CAP_PROP_CONVERT_RGB)<<std::endl;
 
-
-
-
-
+// gain and exposure must be set via v4l2, e.g., from commandline v4l2-ctl --set-ctrl exposure 
     std::cout << "Start grabbing" << std::endl
-         << "Press any key to terminate" << std::endl;
-    //for (;;)
-    //{
-        // wait for a new frame from camera and store it into 'frame'
+    std::string fileName = "";
+    int counter = 0;
+    while (counter < 1000)
+    {
         cap.read(frame);
-        // check if we succeeded
         if (frame.empty()) {
             std::cerr << "ERROR! blank frame grabbed\n";
             return -1;
         }
-        // show live and wait for a key with timeout long enough to show images
-        //std::ctime(reinterpret_cast<const time_t *>(std::chrono::system_clock::to_time_t(
-        //                std::chrono::system_clock::now())))
-        std::cout<<"Frame info: "<<frame.type()<<std::endl;
-        imwrite("/home/fue/image-acq-tests/test08.jpg",frame);
-    //}
-    // the camera will be deinitialized automatically in VideoCapture destructor
+        //std::cout<<"Test:"<<counter;
+        std::cout<<imwrite("/home/fue/test-runs/messung_binned3/gain0_exp1000_duty13_35ltr/"+std::to_string(counter)+".png",frame);
+        counter++;
+    }
+
     return 0;
 }
